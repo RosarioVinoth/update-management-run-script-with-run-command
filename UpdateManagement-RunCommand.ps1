@@ -11,7 +11,7 @@
 #>
 #requires -Modules ThreadJob
 param(
-    [string]$SoftwareUpdateConfigurationRunContext
+    [Parameter(Mandatory)][string]$SoftwareUpdateConfigurationRunContext
 )
 
 #region BoilerplateAuthentication
