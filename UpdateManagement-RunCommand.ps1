@@ -10,7 +10,7 @@
 
 param(
     [Parameter(Mandatory)][string]$SoftwareUpdateConfigurationRunContext,
-    [Parameter(Mandatory)][string]$RHEL_EUS_VERSION_ID
+    [Parameter(Mandatory)][string]$RHEL_EUS_VERSION
 )
 
 Connect-AzAccount -Identity
@@ -38,7 +38,7 @@ if (!$vmIds)
 
 #The script you wish to run on each VM
 $scriptBlock = @"
-echo "$RHEL_EUS_VERSION_ID" > /etc/yum/vars/releasever
+echo "$RHEL_EUS_VERSION" > /etc/yum/vars/releasever
 "@
 $scriptPath = "$runID.ps1"
 #The cmdlet only accepts a file, so temporarily write the script to disk using runID as a unique name
