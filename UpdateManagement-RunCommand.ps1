@@ -10,7 +10,7 @@
 
 param(
     [Parameter(Mandatory)][string]$SoftwareUpdateConfigurationRunContext,
-	[Parameter(Mandatory)][string]$RHEL_EUS_VERSION_ID
+    [Parameter(Mandatory)][string]$RHEL_EUS_VERSION_ID
 )
 
 Connect-AzAccount -Identity
